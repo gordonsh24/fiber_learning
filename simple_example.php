@@ -61,12 +61,12 @@ $start = microtime( true );
 $weatherData = $newsData = null;
 
 $weatherFiber = new Fiber( function () {
-  return callApi( 'weather.php' );
+  return callApi( 'dummy_api/weather.php' );
 } );
 $weatherFiber->start();
 
 $newsFiber = new Fiber( function () {
-  return callApi( 'news.php' );
+  return callApi( 'dummy_api/news.php' );
 } );
 $newsFiber->start();
 
